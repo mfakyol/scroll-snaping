@@ -1,0 +1,61 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.container.horizontal {
+  display: flex;
+  overflow-y: unset;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.container.proximity {
+  scroll-snap-type: x proximity;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.horizontal > .section {
+  flex: none;
+}
+
+.section:nth-child(1) {
+  background-color: aqua;
+}
+
+.section:nth-child(2) {
+  background-color:darkgoldenrod;
+}
+
+.section:nth-child(3) {
+  background-color:coral;
+}
+
+.section:nth-child(4) {
+  background-color: rebeccapurple;
+}
+
+h1 {
+  font-family: "Arial";
+  font-size: 15em;
+}
